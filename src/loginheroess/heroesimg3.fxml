@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Heroesimg3Controller">
+   <children>
+      <ImageView fx:id="img1" fitHeight="150.0" fitWidth="144.0" layoutX="27.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-captain.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imag2" fitHeight="150.0" fitWidth="144.0" layoutX="142.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-cyclops.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imag3" fitHeight="150.0" fitWidth="144.0" layoutX="253.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-daredevil.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imag4" fitHeight="150.0" fitWidth="144.0" layoutX="368.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-iron.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img5" fitHeight="150.0" fitWidth="144.0" layoutX="479.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-hulk.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img6" fitHeight="150.0" fitWidth="144.0" layoutX="27.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-hawkeye.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img7" fitHeight="150.0" fitWidth="144.0" layoutX="142.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-spider.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img8" fitHeight="150.0" fitWidth="144.0" layoutX="253.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-thor.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img9" fitHeight="150.0" fitWidth="144.0" layoutX="368.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-silver.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img10" fitHeight="150.0" fitWidth="144.0" layoutX="479.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/marvel-wolverine.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbltext" layoutX="180.0" layoutY="38.0" text="HEROES MARVEL">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="262.0" text="Capitan America" />
+      <Label layoutX="164.0" layoutY="262.0" text="Cyclops" />
+      <Label layoutX="275.0" layoutY="262.0" text="Daredevil" />
+      <Label layoutX="389.0" layoutY="262.0" text="Irom man" />
+      <Label layoutX="512.0" layoutY="262.0" text="Hulk" />
+      <Label layoutX="48.0" layoutY="467.0" text="Hawkeye " />
+      <Label layoutX="158.0" layoutY="467.0" text="Spider man" />
+      <Label layoutX="286.0" layoutY="467.0" text="Thor" />
+      <Label layoutX="384.0" layoutY="467.0" text="Silver surfer" />
+      <Label layoutX="499.0" layoutY="467.0" text="Wolverine" />
+   </children>
+</AnchorPane>

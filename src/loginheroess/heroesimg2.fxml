@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Heroesimg2Controller">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="32.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-arrow.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="151.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-batman.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="379.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-black.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="32.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-blue.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="266.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-flash.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="151.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-green.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="379.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-martian.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="492.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-robin.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="266.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-superman.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="492.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenheroes/dc-wonder.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="224.0" layoutY="31.0" text="HEROES DC">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="257.0" text="Green arrow" />
+      <Label layoutX="177.0" layoutY="257.0" text="Batman" />
+      <Label layoutX="298.0" layoutY="257.0" text="Flash" />
+      <Label layoutX="393.0" layoutY="257.0" text="Black canary" />
+      <Label layoutX="511.0" layoutY="257.0" text="Nightwing" />
+      <Label layoutX="49.0" layoutY="451.0" text="Blue beetle" />
+      <Label layoutX="161.0" layoutY="451.0" text="Green lantern" />
+      <Label layoutX="286.0" layoutY="451.0" text="Superman" />
+      <Label layoutX="375.0" layoutY="451.0" text="Martian manhunter" />
+      <Label layoutX="497.0" layoutY="451.0" text="Wonder woman" />
+   </children>
+</AnchorPane>
