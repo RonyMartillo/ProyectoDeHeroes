@@ -21,6 +21,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import util.Conexion;
 
 /**
  *
@@ -41,6 +42,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label lblStatus;
 
+    Conexion con = new Conexion();
     @FXML
     private VBox containerLeft;
     @FXML
@@ -49,10 +51,51 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void eventKey(KeyEvent event) {
     }
+    
 
     @FXML
     private void eventAction(ActionEvent event) throws SQLException, IOException {
-    } 
+        if (event.getSource() == btnLogin) {
+
+            String sql = "SELECT * FROM usuarios WHERE usuario = '" + txtUser.getText() + "' AND pass = '" + txtPassword.getText() + "'";
+            String nombre = "";
+            String pass = "";
+            Parent root;
+
+            try {
+                System.out.println(sql);
+                ResultSet rs = con.ejecutarSQLSelect(sql);
+                while (rs.next()) {
+                    nombre = rs.getString(3);
+                    pass = rs.getString(4);
+                }
+
+                if (!nombre.equals("") && !pass.equals("")) {
+
+                    Stage stage = (Stage) this.btnLogin.getScene().getWindow();
+                    stage.close();
+
+                    if (nombre.equals("admin")) {
+                        root = FXMLLoader.load(getClass().getResource("/loginheroess/ViewSelector.fxml"));
+                    } else {
+                        root = FXMLLoader.load(getClass().getResource("/loginheroess/ViewUser.fxml"));
+                    }
+
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.show();
+                } else {
+                    lblStatus.setText("Contraseña Correcta");
+                }
+
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "exception: " + ex);
+            }
+
+        }
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb
