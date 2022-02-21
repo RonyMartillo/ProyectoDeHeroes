@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewSelectorController">
+   <children>
+      <Button fx:id="btnEditor" layoutX="205.0" layoutY="256.0" mnemonicParsing="false" onAction="#editor" prefHeight="33.0" prefWidth="215.0" text="EDITOR DE HEROES" textFill="#491dcf" />
+      <Button fx:id="btnMarvel" layoutX="204.0" layoutY="305.0" mnemonicParsing="false" onAction="#mostrarMarvel" prefHeight="33.0" prefWidth="215.0" text="HEROES DE MARVEL" textFill="#531ceb" />
+      <Button fx:id="btnDC" layoutX="205.0" layoutY="349.0" mnemonicParsing="false" onAction="#mostrardc" prefHeight="33.0" prefWidth="215.0" text="HEROES DE DC" textFill="#2f26eb" />
+      <Label layoutX="186.0" layoutY="123.0" text="SELECCIONE UNA OPCION" textFill="#1f3f97">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="87.0" fitWidth="622.0" layoutX="-6.0" layoutY="27.0" pickOnBounds="true">
+         <image>
+            <Image url="@../imagen/dc.png" />
+         </image></ImageView>
+      <ImageView fitHeight="79.0" fitWidth="615.0" layoutX="1.0" layoutY="391.0" pickOnBounds="true">
+         <image>
+            <Image url="@../imagen/mv.png" />
+         </image></ImageView>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="608.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnBuscar" layoutX="205.0" layoutY="163.0" mnemonicParsing="false" onAction="#buscar" prefHeight="33.0" prefWidth="215.0" text="BUSCAR POR UNO" textFill="#190fe4" />
+      <Button fx:id="btnSearchFill" layoutX="205.0" layoutY="209.0" mnemonicParsing="false" onAction="#onSeachFill" prefHeight="33.0" prefWidth="215.0" text="BUSCAR POR TODOS" textFill="#190fe4" />
+   </children>
+</AnchorPane>
