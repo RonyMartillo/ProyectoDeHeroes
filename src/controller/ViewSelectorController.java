@@ -46,7 +46,29 @@ public class ViewSelectorController implements Initializable {
 
     @FXML
     private void mostrarMarvel(ActionEvent event) throws Exception {
+ try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/heroesimg3.fxml"));
 
+            // Cargo la ventana
+            Parent root = loader.load();
+
+            // Cojo el controlador
+            Heroesimg3Controller controlador = loader.getController();
+
+            // Creo el Scene
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.showAndWait();
+
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
      
     }
 
@@ -59,6 +81,13 @@ public class ViewSelectorController implements Initializable {
 
     @FXML
     private void mostrardc(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/loginheroess/heroesimg2.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
       
     }
 
