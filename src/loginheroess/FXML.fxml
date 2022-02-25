@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1098.0" prefWidth="562.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-arrow.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-batman.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-black.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="430.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-blue.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-flash.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-green.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-martian.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="430.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-robin.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-daredevil.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-wonder.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-captain.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="430.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-cyclops.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="708.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/dc-superman.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="708.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-hawkeye.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="708.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-hulk.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="430.0" layoutY="708.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-iron.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="894.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-silver.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="894.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-spider.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="888.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-thor.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="438.0" layoutY="888.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenheroes/marvel-wolverine.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="199.0" layoutY="14.0" text="HEROES" textFill="#18c3a6">
+               <font>
+                  <Font size="39.0" />
+               </font></Label>
+            <Button layoutX="430.0" layoutY="80.0" mnemonicParsing="false" text="BUSCAR" />
+            <TextField layoutX="71.0" layoutY="80.0" prefHeight="25.0" prefWidth="289.0" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
