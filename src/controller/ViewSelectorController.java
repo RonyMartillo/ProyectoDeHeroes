@@ -74,6 +74,24 @@ public class ViewSelectorController implements Initializable {
 
     @FXML
     private void buscar(ActionEvent event) throws Exception {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/Buscadorimg.fxml"));
+            Parent root = loader.load();
+            BuscadorimgController controlador = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.showAndWait();
+
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
 
         
 
@@ -93,12 +111,34 @@ public class ViewSelectorController implements Initializable {
 
     @FXML
     private void editor(ActionEvent event) throws IOException {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/Editor.fxml"));
+            Parent root = loader.load();
+            EditorController controlador = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.showAndWait();
+
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
        }
     
 
     @FXML
     private void onSeachFill(ActionEvent event) throws IOException {
-       
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/loginheroess/SearchAllImg.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
 }
     @FXML
