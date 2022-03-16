@@ -230,19 +230,58 @@ private ObservableList<Heroe> listaConductores;
 
     //METODO PARA GUARDAR LA INFORMACION A LA BD
     void saveData() {
-        
+        try {
+            //DEFINICION DE SENTENCIA SQL CON PARAMETROS
+            String sql = "INSERT INTO public.heroes(nombre, alia, fecha, enemigo, universo, img) VALUES (?, ?, ?, ?, ?, ?)";
+            //EJCUCION DE SENTENCIA
+            PreparedStatement ps = con.getConexion().prepareStatement(sql);
+            // PARAMETROS ASIGNADOS 
+            ps.setString(1, txtNombreH.getText());
+            ps.setString(2, txtAlter.getText());
+            ps.setString(3, txtPublicacion.getText());
+            ps.setString(4, txtPersonaje.getText());
+            ps.setString(5, cbMarvelOrDc.getValue().toString());
+            ps.setString(6, txtruta.getText());
+
+            ps.execute();
+            ps.close();
+            //AGREGAMIENTO DEL OBJETO GUARDADO EN EL TABLEVIEW
+            listaConductores.add(new Heroe(listHeroe.isEmpty()?1:listHeroe.get(listHeroe.size() - 1).getId() + 1, txtNombreH.getText(), txtAlter.getText(), txtPublicacion.getText(), txtPersonaje.getText(), cbMarvelOrDc.getValue().toString(), txtruta.getText()));
+            //LIMPIEZA DE LA VAJAS DE TEXTO
+            clearText();
+
+            JOptionPane.showMessageDialog(null, "Guardado correctamente");
+        } catch (SQLException | NumberFormatException | HeadlessException x) {
+            JOptionPane.showMessageDialog(null, "exception 2 " + x);
+        }
     }
 
     // METODO ACTUALIZACION DE OBJETO HEROE
-   // Heroe uploadData() {
-       
-    //}
+    Heroe uploadData() {
+        //DEFINICION DE SENTENCIA SQL CON PARAMETROS
+        String sql = "UPDATE public.heroes SET  nombre=?, alia=?, fecha=?, enemigo=?, universo=?, img=? WHERE id= ?";
+        Heroe heroe = null;
+        try {
+            //EJECUCUION DE LA SENTENCIA SQL
+            PreparedStatement ps = con.getConexion().prepareStatement(sql);
+            // PARAMETROS ASIGNADOS 
+            ps.setString(1, txtNombreH.getText());
+            ps.setString(2, txtAlter.getText());
+            ps.setString(3, txtPublicacion.getText());
+            ps.setString(4, txtPersonaje.getText());
+            ps.setString(5, cbMarvelOrDc.getValue().toString());
+            ps.setString(6, txtruta.getText());
+            ps.setInt(7, Integer.valueOf(tf_codigo.getText()));
+            heroe = new Heroe(Integer.valueOf(tf_codigo.getText()), txtNombreH.getText(), txtAlter.getText(), txtPublicacion.getText(), txtPersonaje.getText(), cbMarvelOrDc.getValue().toString(), txtruta.getText());
+            ps.execute();
+            ps.close();
+        } catch (NumberFormatException | SQLException x) {
+            JOptionPane.showMessageDialog(null, "exception 2 " + x);
+        }
 
-    //EVENTO DE ELIMINACION HACIA LA BD
-    void deleteData() {
-       
-
+        return heroe;
     }
+
 
     //METODO DE CLICK EN CADA UNA DE LAS CELDAS
     private void onClicksetCellvalue() {
