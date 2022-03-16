@@ -283,14 +283,47 @@ private ObservableList<Heroe> listaConductores;
     }
 
 
+ //EVENTO DE ELIMINACION HACIA LA BD
+    void deleteData() {
+        //DEFINICION DE SENTENCIA SQL CON PARAMETROS
+        String sql = "DELETE FROM public.heroes WHERE id= ?";
+
+        try {
+            //EJECUCUION DE LA SENTENCIA SQL
+            PreparedStatement ps = con.getConexion().prepareStatement(sql);
+            // PARAMETROS ASIGNADOS 
+            ps.setInt(1, Integer.valueOf(tf_codigo.getText()));
+
+            ps.execute();
+            ps.close();
+        } catch (NumberFormatException | SQLException x) {
+            JOptionPane.showMessageDialog(null, "exception 2 " + x);
+        }
+
+    }
+
     //METODO DE CLICK EN CADA UNA DE LAS CELDAS
     private void onClicksetCellvalue() {
-       
+        tbHeroes.setOnMouseClicked((MouseEvent event) -> {
+            Heroe e = tbHeroes.getItems().get(tbHeroes.getSelectionModel().getSelectedIndex());
+            tf_codigo.setText("" + e.getId());
+            txtNombreH.setText(e.getNombre());
+            txtAlter.setText(e.getAlia());
+            txtPublicacion.setText(e.getFecha());
+            txtPersonaje.setText(e.getEnemigo());
+            txtruta.setText(e.getUrlImg());
+            cbMarvelOrDc.setValue(e.getUniverso());
+        });
     }
 
     //METODO DE LIMPIEZA DE LAS CAJAS DE TEXTO
     void clearText() {
-        
+        tf_codigo.setText("");
+        txtNombreH.setText("");
+        txtAlter.setText("");
+        txtPublicacion.setText("");
+        txtPersonaje.setText("");
+        txtruta.setText("");
+    }
 
 }
-    }
