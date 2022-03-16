@@ -50,7 +50,7 @@
         </menus>
       </MenuBar>
       <Button fx:id="btnBuscar" layoutX="60.0" layoutY="197.0" mnemonicParsing="false" onAction="#buscar" prefHeight="56.0" prefWidth="215.0" text="BUSCAR POR UNO" textFill="#190fe4" />
-      <Button fx:id="btnSearchFill" layoutX="455.0" layoutY="196.0" mnemonicParsing="false" onAction="#onSeachFill" prefHeight="56.0" prefWidth="215.0" text="BUSCAR POR TODOS" textFill="#190fe4" />
-      <Button layoutX="455.0" layoutY="343.0" mnemonicParsing="false" onAction="#IMGBUS" prefHeight="56.0" prefWidth="215.0" text="BUSCADOR DE IMAGENES" textFill="#3006da" />
+      <Button layoutX="455.0" layoutY="343.0" mnemonicParsing="false" onAction="#IMGBUS" prefHeight="56.0" prefWidth="215.0" text="BUSCADOR EDITOR" textFill="#3006da" />
+      <Button fx:id="btnbc" layoutX="455.0" layoutY="196.0" mnemonicParsing="false" onAction="#adsad" prefHeight="56.0" prefWidth="215.0" text="BUSCADOR DE IMAGENES" textFill="#2137c9" />
    </children>
 </AnchorPane>

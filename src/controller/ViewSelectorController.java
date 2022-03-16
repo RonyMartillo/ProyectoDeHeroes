@@ -34,7 +34,7 @@ public class ViewSelectorController implements Initializable {
 
     Conexion con = new Conexion();
     @FXML
-    private Button btnSearchFill;
+    private Button btnbc;
 
     /**
      * Initializes the controller class.
@@ -91,9 +91,7 @@ public class ViewSelectorController implements Initializable {
             alert.setTitle("Error");
             alert.setContentText(ex.getMessage());
             alert.showAndWait();
-        }
-
-        
+        }        
 
     }
 
@@ -132,7 +130,6 @@ public class ViewSelectorController implements Initializable {
        }
     
 
-    @FXML
     private void onSeachFill(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/loginheroess/SearchAllImg.fxml"));
@@ -240,9 +237,9 @@ public class ViewSelectorController implements Initializable {
     @FXML
     private void IMGBUS(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/FXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/SearchAllImg.fxml"));
             Parent root = loader.load();
-            FXMLController controlador = loader.getController();
+            SearchAllImgController controlador = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
@@ -255,6 +252,27 @@ public class ViewSelectorController implements Initializable {
             alert.setContentText(ex.getMessage());
             alert.showAndWait();
         }
+    }
+
+    @FXML
+    private void adsad(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/Filtro.fxml"));
+            Parent root = loader.load();
+            FiltroController controlador = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
+        
     }
 
 }

@@ -10,52 +10,52 @@
    <children>
       <ImageView fx:id="img1" fitHeight="150.0" fitWidth="144.0" layoutX="27.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-captain.jpg" />
+            <Image url="@../imagenheroes/capitan_america.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="imag2" fitHeight="150.0" fitWidth="144.0" layoutX="142.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-cyclops.jpg" />
+            <Image url="@../imagenheroes/ciclope.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="imag3" fitHeight="150.0" fitWidth="144.0" layoutX="253.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-daredevil.jpg" />
+            <Image url="@../imagenheroes/daredevil.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="imag4" fitHeight="150.0" fitWidth="144.0" layoutX="368.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-iron.jpg" />
+            <Image url="@../imagenheroes/ironman.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img5" fitHeight="150.0" fitWidth="144.0" layoutX="479.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-hulk.jpg" />
+            <Image url="@../imagenheroes/hulk.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img6" fitHeight="150.0" fitWidth="144.0" layoutX="27.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-hawkeye.jpg" />
+            <Image url="@../imagenheroes/hawkeye.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img7" fitHeight="150.0" fitWidth="144.0" layoutX="142.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-spider.jpg" />
+            <Image url="@../imagenheroes/spiderman.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img8" fitHeight="150.0" fitWidth="144.0" layoutX="253.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-thor.jpg" />
+            <Image url="@../imagenheroes/thor.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img9" fitHeight="150.0" fitWidth="144.0" layoutX="368.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-silver.jpg" />
+            <Image url="@../imagenheroes/silver.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="img10" fitHeight="150.0" fitWidth="144.0" layoutX="479.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/marvel-wolverine.jpg" />
+            <Image url="@../imagenheroes/wolverine.jpg" />
          </image>
       </ImageView>
       <Label fx:id="lbltext" layoutX="180.0" layoutY="38.0" text="HEROES MARVEL">

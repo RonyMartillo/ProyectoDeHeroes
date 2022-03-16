@@ -10,52 +10,52 @@
    <children>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="32.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-arrow.jpg" />
+            <Image url="@../imagenheroes/flecha_verde.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="151.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-batman.jpg" />
+            <Image url="@../imagenheroes/batman.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="379.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-black.jpg" />
+            <Image url="@../imagenheroes/black_canary.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="32.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-blue.jpg" />
+            <Image url="@../imagenheroes/blue_beetle.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="266.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-flash.jpg" />
+            <Image url="@../imagenheroes/the_flash.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="151.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-green.jpg" />
+            <Image url="@../imagenheroes/linterna-verde.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="379.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-martian.jpg" />
+            <Image url="@../imagenheroes/martian_manhunter.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="492.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-robin.jpg" />
+            <Image url="@../imagenheroes/nightwing.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="266.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-superman.jpg" />
+            <Image url="@../imagenheroes/superman.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="492.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/dc-wonder.jpg" />
+            <Image url="@../imagenheroes/wonder_woman.jpg" />
          </image>
       </ImageView>
       <Label layoutX="224.0" layoutY="31.0" text="HEROES DC">
