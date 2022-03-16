@@ -75,3 +75,5 @@ public class FregistroController implements Initializable {
     
     
   }
+    
+

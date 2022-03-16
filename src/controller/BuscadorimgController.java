@@ -18,14 +18,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javax.swing.JOptionPane;
 import util.Conexion;
-
+import util.Utils;
 
 public class BuscadorimgController implements Initializable {
 
     @FXML
     private Button btnBuscar;
     @FXML
-    private ComboBox<String> comboBox;
+    private ComboBox<String> comboBox;  
     @FXML
     private ImageView ImgView;
     @FXML
@@ -39,10 +39,7 @@ public class BuscadorimgController implements Initializable {
     @FXML
     private Label lblNombre;
 
-    
-
-   
-   Conexion con = new Conexion();
+    Conexion con = new Conexion();
     ObservableList<String> list = FXCollections.observableArrayList(Utils.ListUniversos);
 
     /**

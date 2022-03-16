@@ -27,7 +27,6 @@ import util.Conexion;
 /**
  * FXML Controller class
  *
- * @author JESUS
  */
 public class SearchAllImgController implements Initializable {
 
@@ -104,6 +103,4 @@ public class SearchAllImgController implements Initializable {
         }
     }
 
-    
 }
-

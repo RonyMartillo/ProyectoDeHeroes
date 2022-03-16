@@ -47,11 +47,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void eventKey(KeyEvent event) {
     }
-    
 
     @FXML
     private void eventAction(ActionEvent event) throws SQLException, IOException {
-         if (event.getSource() == btnLogin) {
+        if (event.getSource() == btnLogin) {
 
             String sql = "SELECT * FROM usuarios WHERE usuario = '" + txtUser.getText() + "' AND pass = '" + txtPassword.getText() + "'";
             String nombre = "";

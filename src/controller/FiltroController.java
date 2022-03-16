@@ -78,8 +78,8 @@ public class FiltroController implements Initializable {
             personajes.add(personaje);
             
             personaje = new Personajes();
-            personaje.setNombre("theflash");
-            personaje.setImgsrc("/imagenheroes/the_flash.jpg");
+            personaje.setNombre("flash");
+            personaje.setImgsrc("/imagenheroes/flash.jpg");
             personajes.add(personaje);
             
             personaje = new Personajes();
@@ -93,7 +93,7 @@ public class FiltroController implements Initializable {
             personajes.add(personaje);
 
 	    personaje = new Personajes();
-            personaje.setNombre("felcha verde");
+            personaje.setNombre("flecha verde");
             personaje.setImgsrc("/imagenheroes/flecha_verde.jpg");
             personajes.add(personaje);
 											

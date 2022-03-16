@@ -26,7 +26,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javax.swing.JOptionPane;
 import models.Heroe;
-
+import util.Utils;
 import util.Conexion;
 
 /**
@@ -62,9 +62,7 @@ public class EditorController implements Initializable {
     /**
      * Initializes the controller class.
      */
-
-    
-private ObservableList<Heroe> listaConductores;
+    private ObservableList<Heroe> listaConductores;
     private final ObservableList<String> listCombc = FXCollections.observableArrayList(Utils.ListUniversos);
 
     @FXML
@@ -108,9 +106,8 @@ private ObservableList<Heroe> listaConductores;
             fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Solo archivos jpg", lastFile));
             File f = fc.showOpenDialog(null);
             // C:\Users\Shokuhou\Documents\NetBeansProjects\JavaFXHeroes\src\imagenheroes
-            // C:\Users\User\Downloads\JavaFXHeroes\src\imagenheroes
             if (f != null) {
-                txtruta.setText(f.getAbsolutePath().substring(45).replace("\\", "/"));
+                txtruta.setText(f.getAbsolutePath().substring(61).replace("\\", "/"));
             }
         }
 
@@ -282,8 +279,7 @@ private ObservableList<Heroe> listaConductores;
         return heroe;
     }
 
-
- //EVENTO DE ELIMINACION HACIA LA BD
+    //EVENTO DE ELIMINACION HACIA LA BD
     void deleteData() {
         //DEFINICION DE SENTENCIA SQL CON PARAMETROS
         String sql = "DELETE FROM public.heroes WHERE id= ?";

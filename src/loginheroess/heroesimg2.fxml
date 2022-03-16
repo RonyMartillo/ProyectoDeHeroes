@@ -30,7 +30,7 @@
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="266.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenheroes/the_flash.jpg" />
+            <Image url="@../imagenheroes/flash.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="151.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">

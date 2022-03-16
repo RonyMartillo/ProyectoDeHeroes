@@ -7,7 +7,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLController">
   <content>
@@ -113,12 +112,9 @@
                   <Image url="@../imagenheroes/marvel-wolverine.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="199.0" layoutY="14.0" text="HEROES" textFill="#18c3a6">
-               <font>
-                  <Font size="39.0" />
-               </font></Label>
-            <Button layoutX="430.0" layoutY="80.0" mnemonicParsing="false" text="BUSCAR" />
-            <TextField layoutX="71.0" layoutY="80.0" prefHeight="25.0" prefWidth="289.0" />
+            <Label layoutX="250.0" layoutY="14.0" text="Label" />
+            <Button layoutX="438.0" layoutY="67.0" mnemonicParsing="false" text="Button" />
+            <TextField layoutX="71.0" layoutY="67.0" prefHeight="25.0" prefWidth="289.0" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

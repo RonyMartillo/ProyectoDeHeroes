@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchAllImgController">
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchAllImgController">
    <children>
       <Label layoutX="24.0" layoutY="40.0" text="Universo: ">
          <font>
@@ -26,10 +26,10 @@
       <Button fx:id="btnBuscar" layoutX="379.0" layoutY="70.0" mnemonicParsing="false" onAction="#onTapBuscar" prefHeight="25.0" prefWidth="74.0" text="Buscar" />
       <TableView fx:id="tbHeroes" layoutX="24.0" layoutY="120.0" prefHeight="288.0" prefWidth="806.0">
         <columns>
-          <TableColumn fx:id="CLNombre" prefWidth="162.00002479553223" text="Nombre" />
-          <TableColumn fx:id="CLAlias" minWidth="0.0" prefWidth="175.33335876464844" text="Alias" />
-            <TableColumn fx:id="CLPublicacion" prefWidth="138.66668701171875" text="Publicación" />
-            <TableColumn fx:id="CLNemesis" prefWidth="149.3333740234375" text="Nemesis" />
+          <TableColumn fx:id="CLNombre" prefWidth="162.00002479553223" text="Nombre(Alter Ego)" />
+          <TableColumn fx:id="CLAlias" minWidth="0.0" prefWidth="128.0" text="Nombre del Heroe" />
+            <TableColumn fx:id="CLPublicacion" prefWidth="219.0" text="Publicación" />
+            <TableColumn fx:id="CLNemesis" prefWidth="118.0" text="Nemesis" />
             <TableColumn fx:id="CLImagen" prefWidth="177.33331298828125" text="Imagen" />
         </columns>
       </TableView>
