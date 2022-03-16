@@ -120,9 +120,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void onRegister(MouseEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/Maasdain.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/loginheroess/Fregistro.fxml"));
             Parent root = loader.load();
-            Heroesimg3Controller controlador = loader.getController();
+            FregistroControler controlador = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
