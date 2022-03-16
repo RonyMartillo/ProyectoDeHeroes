@@ -139,18 +139,92 @@ private ObservableList<Heroe> listaConductores;
     @FXML
     private void onDeleteData(ActionEvent event) {
         //VERIFICACION DEL QUE EL BOTON QUE LLAME A ESTE EVENTO SEA EL DE ELIMINAR
-        
+        if (event.getSource() == btnEliminar) {
+            //VERIFICACION SI LA LISTA ES VACIA O NO
+            if (!listHeroe.isEmpty()) {
+                //ELIMINACION HACIA LA BASE DE DATOS
+                deleteData();
+                //ELIMINACION DEL OBJETO EN EL COMPONENTE TABLEVIEW 
+                tbHeroes.getItems().remove(tbHeroes.getSelectionModel().getSelectedItems().get(0));
+                //LIMPIEZA DE LAS CAJAS DE TEXTO
+                clearText();
+                //MENSAJE
+                JOptionPane.showMessageDialog(null, "Se elimino item seleccionado con exito");
+            } else {
+                //MENSAJE
+                JOptionPane.showMessageDialog(null, "No hay ningun elemento seleccionado");
+            }
+        }
     }
 
     //METODO DE ACTUALIZACION DEL OBJETO HEROE 
     @FXML
     private void onUpdateData(ActionEvent event) {
-       
+        //VERIFICACION DEL QUE EL BOTON QUE LLAME A ESTE EVENTO SEA EL DE ACTUALIZAR
+        if (event.getSource() == btnModificar) {
+            //VERIFICACION QUE NINGUNA CAJA DE TEXTO ESSTE VACIA 
+            if (!txtNombreH.getText().isEmpty() && !txtAlter.getText().isEmpty() && !txtPublicacion.getText().isEmpty()
+                    && !txtPersonaje.getText().isEmpty() && !txtruta.getText().isEmpty() && cbMarvelOrDc.getValue() != null) {
+                //VERIFICACION SI LA LISTA ES VACIA O NO
+                if (!listHeroe.isEmpty()) {
+                    //ACTUALIZACION A LA BASE DE DATOS Y EL METODO DEVUELVE EL OBJETO ACTUALIZADO PARA HACER EL REMPLAZO 
+                    //EN EL TABLEVIWE DEL DICHO OBJETO
+                    Heroe h = uploadData();
+                    //VERIFICACION SI HUBO  UN ERROR LO RETORNA VACIO EN CASO DE QUE NO RETORNA EL OBJETO ACTUALIZADO 
+
+                    if (h != null) {
+                        //REMPLAZA EL OBJETO ACTUALIZADO AL TABLEVIEW PARA MAYOR COMPRENCION
+                        listaConductores.set(tbHeroes.getSelectionModel().getSelectedIndex(), h);
+                        //LIMPIEZA DE LAS CAJAS DE TEXTO
+                        clearText();
+                        JOptionPane.showMessageDialog(null, "Registro Actualizado");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Error en el update");
+                    }
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "No hay ningun elemento seleccionado");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Datos sin completar en el formulario");
+            }
+
+        }
     }
 
     //METODO DE INIZIALIZACION DE LISTA
     void initLista() {
-        
+        //SENTENCIA SQL A EJECUTAR EN LA BD
+        String sql = "SELECT* FROM heroes ORDER BY id";
+        //IMPRECION POR CONSOLA PARA SABER QUE SQL SE ESTA EJECUTANDO
+        System.out.println(sql);
+        try {
+            // EJECUCUCION DEL QUERY
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            //RECORRER RESPUESTA DEL SQL Y AGREGAR CADA UNO D ELOS REGISTROS COMO OBJETO EN LA LISTA
+            while (rs.next()) {
+                listHeroe.add(new Heroe(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)));
+            }
+
+            //VERIFICACION QUE NO ESTE VACIO LA LISTA TIENE QUE SER MAYOR A UNO 
+            if (listHeroe.isEmpty()) {
+                tbHeroes.setPlaceholder(new Label("No hay registros!!"));
+            } else {
+                //LLENADO DE LA INFORMACION DEL OBSERVABLE Y DEFINICION DEL NOMBRE DE CADA UNO DE LAS COLUMNAS LOS MISMOS NOMBRES
+                // DE LAS COLUMNAS TIENEN QUE SER LOS MISMO NOMBRES DE LA CLASE PARA HACER REFERENCIA A LA ASIGNACION DE CADA OBJETO
+                listaConductores = FXCollections.observableArrayList(listHeroe);
+                tbHeroes.setItems(listaConductores);
+                clID.setCellValueFactory(new PropertyValueFactory<>("id"));
+                clEditorial.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+                clNombre.setCellValueFactory(new PropertyValueFactory<>("alia"));
+                clAlter.setCellValueFactory(new PropertyValueFactory<>("fecha"));
+                clPubli.setCellValueFactory(new PropertyValueFactory<>("enemigo"));
+                clChara.setCellValueFactory(new PropertyValueFactory<>("universo"));
+                clFoto.setCellValueFactory(new PropertyValueFactory<>("urlImg"));
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "exception: " + ex);
+        }
 
     }
 
