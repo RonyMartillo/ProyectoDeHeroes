@@ -25,6 +25,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javax.swing.JOptionPane;
+import models.Heroe;
 
 import util.Conexion;
 
@@ -63,44 +64,74 @@ public class EditorController implements Initializable {
      */
 
     
+private ObservableList<Heroe> listaConductores;
+    private final ObservableList<String> listCombc = FXCollections.observableArrayList(Utils.ListUniversos);
 
     @FXML
-    private TableView<?> tbHeroes;
+    private TableView<Heroe> tbHeroes;
     @FXML
-    private TableColumn<?,?> clID;
+    private TableColumn<Heroe, Integer> clID;
     @FXML
-    private TableColumn<?,?> clEditorial;
+    private TableColumn<Heroe, String> clEditorial;
     @FXML
-    private TableColumn<?,?> clNombre;
+    private TableColumn<Heroe, String> clNombre;
     @FXML
-    private TableColumn<?,?> clAlter;
+    private TableColumn<Heroe, String> clAlter;
     @FXML
-    private TableColumn<?,?> clPubli;
+    private TableColumn<Heroe, String> clPubli;
     @FXML
-    private TableColumn<?,?> clChara;
+    private TableColumn<Heroe, String> clChara;
     @FXML
-    private TableColumn<?,?> clFoto;
+    private TableColumn<Heroe, String> clFoto;
     //llamado de lista
     List<String> lastFile;
-    
-   
-   
+    List<Heroe> listHeroe = new ArrayList<>();
+    //instancia de la conexion 
+    Conexion con = new Conexion();
 
     @FXML
     private void GuardarDatos(ActionEvent event) {
-        
+        if (event.getSource() == btnAgregar) {
+            if (!txtNombreH.getText().isEmpty() && !txtAlter.getText().isEmpty() && !txtPublicacion.getText().isEmpty()
+                    && !txtPersonaje.getText().isEmpty() && !txtruta.getText().isEmpty() && cbMarvelOrDc.getValue() != null) {
+                saveData();
+            } else {
+                JOptionPane.showMessageDialog(null, "Datos sin completar en el formulario");
+            }
+        }
     }
 
     @FXML
     private void buscarimg(ActionEvent btnBuscaImg) {
-        
+        if (btnBuscaImg.getSource() == this.btnBuscaImg) {
+            FileChooser fc = new FileChooser();
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Solo archivos jpg", lastFile));
+            File f = fc.showOpenDialog(null);
+            // C:\Users\Shokuhou\Documents\NetBeansProjects\JavaFXHeroes\src\imagenheroes
+            // C:\Users\User\Downloads\JavaFXHeroes\src\imagenheroes
+            if (f != null) {
+                txtruta.setText(f.getAbsolutePath().substring(45).replace("\\", "/"));
+            }
+        }
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //llenado del observable list a el componente del combo box 
-       
+        cbMarvelOrDc.setItems(listCombc);
+        //creacion de la lista de la extensiones a elegir en el exporador de archivos 
+        lastFile = new ArrayList<>();
+        lastFile.add("*.jpg");
+        lastFile.add("*.JPG");
+        lastFile.add("*.PNG");
+        lastFile.add("*.png");
+        lastFile.add("*.JPEG");
+        lastFile.add("*.jpeg");
+        //inizializar lista de heroes consulta de la base de datos
+        initLista();
+        //evento de seleccion de column en el tableview para la optencion de datos
+        onClicksetCellvalue();
 
     }
 
